@@ -1,0 +1,48 @@
+(0), 1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19, (22)
+
+
+1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19
+
+the one before 19 can only be 16
+  the one before 16 can only be 15
+    the one before 15 can only be 12
+      the one before 12 can be 11
+        the one before 11 can only be 10
+          the one before 10 can only be 7
+            the one before 7 can be 6
+              the one before 6 can be 5
+                the one before 5 can only be 4
+                  the one before 4 can only be 1
+                    1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19
+              the one before 6 can be 4
+                  the one before 4 can only be 1
+                    1, 4, 6, 7, 10, 11, 12, 15, 16, 19
+            the one before 7 can be 5
+                the one before 5 can only be 4
+                  the one before 4 can only be 1
+                    1, 4, 5, 7, 10, 11, 12, 15, 16, 19
+            the one before 7 can be 4
+                  the one before 4 can only be 1
+                    1, 4, 7, 10, 11, 12, 15, 16, 19
+      the one before 12 can be 10
+          the one before 10 can only be 7
+            the one before 7 can be 6
+              the one before 6 can be 5
+                the one before 5 can only be 4
+                  the one before 4 can only be 1
+                    1, 4, 5, 6, 7, 10, 12, 15, 16, 19
+              the one before 6 can be 4
+                  the one before 4 can only be 1
+                    1, 4, 6, 7, 10, 12, 15, 16, 19
+            the one before 7 can be 5
+                the one before 5 can only be 4
+                  the one before 4 can only be 1
+                    1, 4, 5, 7, 10, 12, 15, 16, 19
+            the one before 7 can be 4
+                  the one before 4 can only be 1
+                    1, 4, 7, 10, 12, 15, 16, 19
+
+
+
+
+

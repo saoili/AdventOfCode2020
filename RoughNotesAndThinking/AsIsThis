@@ -1,0 +1,22 @@
+1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19
+
+
+1 -> 4
+4 -> 5 or 6 or 7 (3)
+5 -> 6 or 7 (2)
+6 -> 7 (1)
+7 -> 10 (1)
+10 -> 11 or 12 (2)
+11 -> 12 (1)
+12 -> 15 (1)
+15 -> 16 (1)
+16 -> 19 (1)
+
+so we can discount all the ones, leaving us
+
+4 -> 5 or 6 or 7 (3)
+5 -> 6 or 7 (2)
+10 -> 11 or 12 (2)
+
+
+not enough branches to derive formula

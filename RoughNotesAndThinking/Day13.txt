@@ -1,0 +1,15 @@
+- find a set of print statments that really do check the thing in the premise
+ - eg.s that don't seem to:
+    for bus, t in bus_ids_with_t:
+      print(f"bus is {bus}, t is {t}, (bus - (answer % bus)) % bus is", end ="")
+      print(f" {(bus - (answer % bus)) % bus}", end="")
+      print(f" t == (bus - (answer % bus)) % bus?: {t == (bus - (answer % bus)) % bus}", end="")
+      print(f" t > bus?: {t > b
+
+    for bus, t in bus_ids_with_t:
+      print(f"bus is {bus}, t is {t}", end ="")
+      a = answer % bus
+      print(f" answer % bus (a) is {a}", end="")
+      print(f" t 0 or a mod t is bus?: {t == 0 or a % t == bus}", end="")
+      print(f" t > bus?: {t > bus}")
+ - run those against both my way and their way and see the difference

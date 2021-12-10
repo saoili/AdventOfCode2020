@@ -1,0 +1,140 @@
+1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19
+
+
+1 -> 4
+4 -> 5 or 6 or 7 (3)
+5 -> 6 or 7 (2)
+6 -> 7 (1)
+7 -> 10 (1)
+10 -> 11 or 12 (2)
+11 -> 12 (1)
+12 -> 15 (1)
+15 -> 16 (1)
+16 -> 19 (1)
+
+so we can discount all the ones, leaving us
+
+4 -> 5 or 6 or 7 (3)
+5 -> 6 or 7 (2)
+10 -> 11 or 12 (2)
+
+
+not enough branches to derive formula
+
+
+get_answer(current_list)
+answer = 0
+
+for start in 1, 2, 3 more than the current one
+  if start in list
+    answer += ways from there on
+
+return answer
+
+
+
+get_answer(0, 1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19)
+current_list = 0, 1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19
+answer before = 0
+current one 0
+start in 1, 2, 3
+answer += get_answer(1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19)
+answer after = 8
+
+
+get_answer(1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19)
+current_list = 1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19
+answer before = 0
+current one 1
+start in 2, 3, 4
+answer += get_answer(4, 5, 6, 7, 10, 11, 12, 15, 16, 19)
+answer after = 8
+
+get_answer(4, 5, 6, 7, 10, 11, 12, 15, 16, 19)
+current_list = 4, 5, 6, 7, 10, 11, 12, 15, 16, 19
+answer before 0
+current one 4
+start in 5, 6, 7
+answer += get_answer(5, 6, 7, 10, 11, 12, 15, 16, 19) = 4
+answer += get_answer(6, 7, 10, 11, 12, 15, 16, 19) = 2
+answer += get_answer(7, 10, 11, 12, 15, 16, 19) = 2
+answer after = 8
+
+
+get_answer(5, 6, 7, 10, 11, 12, 15, 16, 19)
+current_list = 5, 6, 7, 10, 11, 12, 15, 16, 19
+answer before 0
+current one 5
+start in 6, 7, 8
+answer += get_answer(6, 7, 10, 11, 12, 15, 16, 19) = 2
+answer += get_answer(7, 10, 11, 12, 15, 16, 19) = 2
+answer after = 4
+
+
+get_answer(6, 7, 10, 11, 12, 15, 16, 19)
+current_list = 6, 7, 10, 11, 12, 15, 16, 19
+answer before = 0
+current one 6
+start in 7, 8, 9
+answer += get_answer(7, 10, 11, 12, 15, 16, 19) = 2
+answer after = 2
+
+
+get_answer(7, 10, 11, 12, 15, 16, 19)
+current_list = 7, 10, 11, 12, 15, 16, 19
+answer before = 0
+current one 7
+start in 8, 9, 10
+answer += get_answer(10, 11, 12, 15, 16, 19)
+answer after = 2
+
+
+get_answer(10, 11, 12, 15, 16, 19)
+current_list = 10, 11, 12, 15, 16, 19
+answer before = 0
+current one 10
+start in 11, 12, 13
+answer += get_answer(11, 12, 15, 16, 19) = 1
+answer += get_answer(12, 15, 16, 19) = 1
+answer after = 2
+
+
+get_answer(11, 12, 15, 16, 19)
+current_list = 11, 12, 15, 16, 19
+answer before = 0
+current one 11
+start in 12, 13, 14
+answer += get_answer(12, 15, 16, 19) = 1
+answer after = 1
+
+
+get_answer(12, 15, 16, 19)
+current_list = 12, 15, 16, 19
+answer before = 0
+current one 12
+start in 13, 14, 15
+answer += get_answer(15, 16, 19) = 1
+answer after = 1
+
+
+get_answer(15, 16, 19)
+current_list = 15, 16, 19
+answer_before = 0
+current one = 15
+start in 16, 17, 18
+answer += get_answer(16, 19) = 1
+answer after = 1
+
+
+get_answer(16, 19)
+current_list = 16, 19
+answer_before = 0
+current one = 16
+start in 17, 18, 19
+answer += get_answer(19) = 1
+answer after = 1
+
+get_answer(19)
+current_list = 19
+base case!
+return 1

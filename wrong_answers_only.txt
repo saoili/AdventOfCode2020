@@ -1,0 +1,22 @@
+Day 2 Part 1
+462 -> too low
+765 -> too high
+
+
+???
+
+Day 13 Part 2
+756261495958075 -> too low
+
+
+Day 14 Part 2
+1934071975497878 -> too high
+
+
+Day 18 Part 2
+16332191652452 -> too low
+40728811466672628830896 -> too high
+
+
+Day 20 Part 2
+43 -> it just says wrong
